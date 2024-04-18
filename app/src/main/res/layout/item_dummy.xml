@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/tvItemPrice"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textColor="@color/tvColor"
@@ -68,7 +68,8 @@
         tools:text="1,000" />
 
     <TextView
-        android:layout_width="0dp"
+        android:id="@+id/won"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/won"
         android:textColor="@color/tvColor"

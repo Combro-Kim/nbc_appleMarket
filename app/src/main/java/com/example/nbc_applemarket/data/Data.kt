@@ -13,5 +13,6 @@ data class Data (
     val image : Int,
     val chatNum : Int,
     val likeNum : Int,
-    val mannerTemperature : Double
+    val mannerTemperature : Double,
+    var isHeart: Boolean
 ):Parcelable

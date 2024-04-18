@@ -8,12 +8,22 @@ import com.example.nbc_applemarket.data.Data
 import com.example.nbc_applemarket.databinding.ItemDummyBinding
 import java.text.DecimalFormat
 
-class DataAdapter(private val data: MutableList<Data>) : RecyclerView.Adapter<DataAdapter.Holder>() {
+class DataAdapter(private val data: MutableList<Data>,private val isLiked:Boolean) : RecyclerView.Adapter<DataAdapter.Holder>() {
+//    var isHeart = false
 
-    interface ItemClick{
+    interface ItemClick {
         fun onClick(view: View, position: Int)
     }
-    var itemClick : ItemClick? = null
+
+    var itemClick: ItemClick? = null
+
+    //길게 눌렀을 경우
+    interface ItemLongClick {
+        fun onLongClick(view: View, position: Int)
+    }
+
+    var itemLongClick: ItemLongClick? = null
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = ItemDummyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,26 +36,39 @@ class DataAdapter(private val data: MutableList<Data>) : RecyclerView.Adapter<Da
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.itemView.setOnClickListener {
-            itemClick?.onClick(it,position)
+            itemClick?.onClick(it, position)
         }
-        holder.apply {
-            image.setImageResource(data[position].image)
-            title.text = data[position].title
-            location.text = data[position].location
-            likeNum.text = data[position].likeNum.toString()
-            chatNum.text = data[position].chatNum.toString()
 
-            val decimal = DecimalFormat("#,###")
-            price.text = decimal.format(data[position].price.toString().toInt())
+        holder.itemView.setOnLongClickListener {
+            itemLongClick?.onLongClick(it, position)
+            true
+        }
+
+        holder.bind(data[position])
+
+        if(isLiked){
+            holder.itemView
         }
     }
 
-    inner class Holder(binding: ItemDummyBinding) : RecyclerView.ViewHolder(binding.root) {
-        val image = binding.ivMainImage
-        val title = binding.tvItemTitle
-        val location = binding.tvItemLocation
-        val likeNum = binding.tvItemLikeNum
-        val chatNum = binding.tvItemChatNum
-        val price = binding.tvItemPrice
+
+    inner class Holder(private val binding: ItemDummyBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(data: Data) {
+            binding.apply {
+                ivMainImage.setImageResource(data.image)
+                tvItemTitle.text = data.title
+                tvItemLocation.text = data.location
+                val decimal = DecimalFormat("#,###")
+                tvItemPrice.text = decimal.format(data.price)
+                tvItemLikeNum.text = data.likeNum.toString()
+                tvItemChatNum.text = data.chatNum.toString()
+/*                if(isLiked){
+                    tvItemLikeNum.text = data.likeNum.plus(1).toString()
+                }else{
+                    tvItemLikeNum.text = data.likeNum.toString()
+                }*/
+            }
+        }
     }
 }

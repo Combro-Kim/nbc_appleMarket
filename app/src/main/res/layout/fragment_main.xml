@@ -50,4 +50,15 @@
         app:layout_constraintTop_toBottomOf="@id/tvMainUserLocation"
         tools:listitem="@layout/item_dummy" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="invisible"
+        android:backgroundTint="@drawable/btn_click_color_change"
+        android:src="@drawable/icon_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

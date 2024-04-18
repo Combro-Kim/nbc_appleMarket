@@ -1,6 +1,10 @@
 package com.example.nbc_applemarket.data
 
-class DataSource { //todo SingleTon 이해하기
+import com.example.nbc_applemarket.adapter.DataAdapter
+
+class DataSource { //todo SingleTon 이해
+    private var dataList: MutableList<Data> = dataList()
+
     companion object {
         private var INSTANCE: DataSource? = null
         fun getDataSource(): DataSource {
@@ -11,7 +15,24 @@ class DataSource { //todo SingleTon 이해하기
             }
         }
     }
-    fun getDataList() : MutableList<Data>{
-        return dataList()
+
+    fun getDataList(): MutableList<Data> {
+//        return dataList()
+        return dataList
     }
+
+
+    fun removeItem(position: Int) {
+        if (position in 0 until dataList.size) {
+            dataList.removeAt(position)
+        }
+    }
+
+    /*    fun removeItem(position: Int) {
+            if (position in 0 until dataList().size) {
+                dataList().removeAt(position)
+                adapter.notifyItemRemoved(position)
+                adapter.notifyItemRangeChanged(position, dataList().size)
+            }
+        }*/
 }

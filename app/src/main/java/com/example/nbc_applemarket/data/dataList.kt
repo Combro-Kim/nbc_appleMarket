@@ -13,7 +13,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample1,
             chatNum = 25,
             likeNum = 13,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "안마담",
@@ -24,7 +25,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample2,
             chatNum = 28,
             likeNum = 8,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "코코유",
@@ -35,7 +37,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample3,
             chatNum = 5,
             likeNum = 23,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "Nicole",
@@ -46,7 +49,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample4,
             chatNum = 17,
             likeNum = 14,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "절명",
@@ -57,7 +61,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample5,
             chatNum = 9,
             likeNum = 22,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "미니멀하게",
@@ -68,18 +73,20 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample6,
             chatNum = 16,
             likeNum = 25,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "굿리치",
-            title = "울산 동해오션뷰 60평 복층 펜트하우스 1일 숙박권 펜션 힐링 숙소 별장\n",
+            title = "울산 동해오션뷰 60평 복층 펜트하우스 1일 숙박권 펜션 힐링 숙소 별장",
             description = "울산 동해바다뷰 60평 복층 펜트하우스 1일 숙박권\n(에어컨이 없기에 낮은 가격으로 변경했으며 8월 초 가장 더운날 다녀가신 분 경우 시원했다고 잘 지내다 가셨습니다)\n1. 인원: 6명 기준입니다. 1인 10,000원 추가요금\n2. 장소: 북구 블루마시티, 32-33층\n3. 취사도구, 침구류, 세면도구, 드라이기 2개, 선풍기 4대 구비\n4. 예약방법: 예약금 50,000원 하시면 저희는 명함을 드리며 입실 오전 잔금 입금하시면 저희는 동.호수를 알려드리며 고객님은 예약자분 신분증 앞면 주민번호 뒷자리 가리시거나 지우시고 문자로 보내주시면 저희는 카드키를 우편함에 놓아 둡니다.\n5. 33층 옥상 야외 테라스 있음, 가스버너 있음\n6. 고기 굽기 가능\n7. 입실 오후 3시, 오전 11시 퇴실, 정리, 정돈 , 밸브 잠금 부탁드립니다.\n8. 층간소음 주의 부탁드립니다.\n9. 방3개, 화장실3개, 비데 3개\n10. 저희 집안이 쓰는 별장입니다.",
             location = "남구 옥동",
             price = 150000,
             image = R.drawable.sample7,
             chatNum = 54,
             likeNum = 142,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "난쉽",
@@ -90,7 +97,8 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample8,
             chatNum = 7,
             likeNum = 31,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "알뜰한",
@@ -101,18 +109,20 @@ fun dataList(): MutableList<Data>{
             image = R.drawable.sample9,
             chatNum = 28,
             likeNum = 7,
-            mannerTemperature = 39.3
+            mannerTemperature = 39.3,
+            isHeart = false
         ),
         Data(
             name = "똑태현",
-            title = "셀린느 버킷 가방\n",
+            title = "셀린느 버킷 가방",
             description = "22년 신세계 대전 구매입니당\n셀린느 버킷백\n구매해서 몇번사용했어요\n까짐 스크래치 없습니다.\n타지역에서 보내는거라 택배로 진행합니당!",
             location = "중구 동화동",
             price = 190000,
             image = R.drawable.sample10,
             chatNum = 6,
             likeNum = 40,
-            mannerTemperature = 39.3
-        ),
+            mannerTemperature = 39.3,
+            isHeart = false
+        )
     )
 }
