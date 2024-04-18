@@ -1,6 +1,7 @@
 # 내배캠_AppleMarket
 <br>
-## Main/Detail
+
+## Main, Detail 화면
 <img src="https://github.com/Combro-Kim/nbc_appleMarket/assets/84631435/6b084499-d723-45ab-bd9b-279b2a336cce" height="500" width="230">|<img src="https://github.com/Combro-Kim/nbc_appleMarket/assets/84631435/85e2ad7d-bee6-43a5-8780-63c65361ee96" height="500" width="230">
 --- | --- |
 <br>
